@@ -36,6 +36,7 @@ buildscript {
 apply plugin: 'application'
 apply plugin: 'java'
 apply plugin: 'kotlin'
+apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
 //apply plugin: 'org.springframework.boot'
 
 sourceCompatibility = 1.8
