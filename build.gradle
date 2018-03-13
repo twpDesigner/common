@@ -1,3 +1,6 @@
+group = 'com.twp'
+version = '0.1-SNAPSHOT'
+
 buildscript {
     ext.kotlin_version = '1.1.4-2'
 
@@ -36,7 +39,6 @@ buildscript {
 apply plugin: 'application'
 apply plugin: 'java'
 apply plugin: 'kotlin'
-apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
 //apply plugin: 'org.springframework.boot'
 
 sourceCompatibility = 1.8
