@@ -19,23 +19,4 @@ target/
 *.ipr
 src/test/
 logs/
-
-### NetBeans ###
-nbproject/private/
-build/
-nbbuild/
-dist/
-nbdist/
-.nb-gradle/
-auth-security/out/production/classes/generated/
-auth-security/sql/
-auth-security/src/test/
-common/out/production/classes/generated/
-common/src/test/
-dfs-server/out/production/classes/generated/
-dfs-server/out/test/classes/generated_tests/
-Would skip repository dfs-ui/iview-admin
-.gradle/4.3.1/fileContent/annotation-processors.bin
-auth-security/out/production/classes/com/twp/auth/config/Cors.class
-dfs-ui/.DS_Store
-dfs-ui/iview-admin.zip
+.gradle
