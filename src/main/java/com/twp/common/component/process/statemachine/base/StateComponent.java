@@ -11,6 +11,7 @@ import lombok.experimental.Accessors;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import org.javatuples.Pair;
+import org.springframework.stereotype.Component;
 
 import java.util.Map;
 import java.util.Optional;
