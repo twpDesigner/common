@@ -1,3 +1,5 @@
+def myArtifact="common";
+
 def Dversion = [
         mavenGradlePlugin:"2.0",
         kotlin_version : '1.1.4-2',
@@ -31,7 +33,7 @@ def PconfigMap = [
                     lombok : "org.projectlombok:lombok:${Dversion.plugin.lombok}"
                 ],
         publish:[
-                remoteUrl:"http://218.94.54.84:30005/repository/common/",
+                remoteUrl:"http://218.94.54.84:30005/repository/${myArtifact}/",
                 username:"admin",
                 password:"admin123"
         ]
@@ -41,7 +43,7 @@ ext{
     programDep = PconfigMap.programDep.values()
     publish = PconfigMap.publish
     myMainClass = "com.twp.Application"
-    myArtifactId="common"
+    myArtifactId = myArtifact
     myGroup = 'com.twp'
-    myVersion = '0.0.1'
+    myVersion = '0.0.2'
 }
