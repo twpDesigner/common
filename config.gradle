@@ -1,0 +1,47 @@
+def Dversion = [
+        mavenGradlePlugin:"2.0",
+        kotlin_version : '1.1.4-2',
+        springBootVersion : '2.0.0.RELEASE',
+        springboot : [
+                jpa  : '1.5.7.RELEASE',
+                web:'1.5.7.RELEASE',
+        ],
+        plugin : [
+                lombok : "1.16.18"
+        ],
+        other : [
+                fastJson:"1.2.41",
+                gson:"2.8.2",
+                swagger:[
+                        "core":"2.7.0",
+                        "ui":"2.7.0"
+                ],
+                javatuples: '1.2'
+        ]
+]
+
+def PconfigMap = [
+        programDep:
+                [
+                    jpa : "org.springframework.boot:spring-boot-starter-data-jpa:${Dversion.springboot.jpa}",
+                    web : "org.springframework.boot:spring-boot-starter-web:${Dversion.springboot.web}",
+                    fastjson: "com.alibaba:fastjson:${Dversion.other.fastJson}",
+                    gson: "com.google.code.gson:gson:${Dversion.other.gson}",
+                    javatuples:"org.javatuples:javatuples:${Dversion.other.javatuples}",
+                    lombok : "org.projectlombok:lombok:${Dversion.plugin.lombok}"
+                ],
+        publish:[
+                remoteUrl:"http://218.94.54.84:30005/repository/common/",
+                username:"admin",
+                password:"admin123"
+        ]
+]
+
+ext{
+    programDep = PconfigMap.programDep.values()
+    publish = PconfigMap.publish
+    myMainClass = "com.twp.Application"
+    myArtifactId="common"
+    myGroup = 'com.twp'
+    myVersion = '0.0.1'
+}

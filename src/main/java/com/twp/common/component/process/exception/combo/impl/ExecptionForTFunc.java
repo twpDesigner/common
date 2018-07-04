@@ -8,7 +8,6 @@ import com.twp.common.component.process.statemachine.domain.StateNode;
 import com.twp.common.component.process.statemachine.domain.iinterface.IStateException;
 import lombok.Builder;
 import lombok.extern.slf4j.Slf4j;
-import org.jetbrains.annotations.NotNull;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;
@@ -19,18 +18,18 @@ import java.util.Optional;
 public class ExecptionForTFunc implements IComboExecptionForTFunc {
 
     @Override
-    public <T,Ex extends Exception> T executeFlow(@NotNull T t, IExecptionForTFunc<T> iExecptionForTFunc) {
+    public <T,Ex extends Exception> T executeFlow( T t, IExecptionForTFunc<T> iExecptionForTFunc) {
         return executeFlow(t,iExecptionForTFunc,null);
     }
 
     @Override
-    public <T,Ex extends Exception> T executeFlow(@NotNull T t, IExecptionForTFunc<T> iExecptionForTFunc, IExecptionForTFunc.IExecptionForTCatch<T,Ex> iExecptionForTCatch) {
+    public <T,Ex extends Exception> T executeFlow( T t, IExecptionForTFunc<T> iExecptionForTFunc, IExecptionForTFunc.IExecptionForTCatch<T,Ex> iExecptionForTCatch) {
         return executeFlow(t,iExecptionForTFunc,iExecptionForTCatch,null);
     }
 
     @Override
     public <T,Ex extends Exception> T executeFlow(
-            @NotNull T state,
+             T state,
             IExecptionForTFunc<T> process,
             IExecptionForTFunc.IExecptionForTCatch<T,Ex> iExecptionForTCatch,
             IExecptionForTFunc.IExecptionFinallyForT<T> iExecptionFinallyForT) {
@@ -48,7 +47,7 @@ public class ExecptionForTFunc implements IComboExecptionForTFunc {
 
     @Override
     public <T, Ex extends Exception> T executeNewState(
-            @NotNull T state,
+             T state,
             IExecptionForTFunc.IExecuteStateTranslate<T> iExecuteStateTranslate,
             IExecptionForTFunc.IExecptionForTCatch<T, Ex> iExecptionForTCatch,
             IExecptionForTFunc.IExecptionFinallyForT<T> iExecptionFinallyForT

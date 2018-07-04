@@ -1,0 +1,40 @@
+//引入配置
+apply from:"config.gradle"
+
+jar {
+    from sourceSets.main.output
+    manifest {
+        attributes 'Main-Class': myMainClass
+    }
+}
+
+
+//上传资源配置
+task sourceJar(type: Jar) {
+    from sourceSets.main.output
+    classifier "sources"
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            artifact sourceJar
+            groupId "$myGroup"
+            artifactId myArtifactId
+            version "$myVersion"
+        }
+    }
+}
+
+publishing {
+    repositories{
+        maven {
+            url = publish.remoteUrl
+            credentials {
+                username publish.username
+                password publish.password
+            }
+        }
+    }
+}
