@@ -5,8 +5,8 @@ def Dversion = [
         kotlin_version : '1.1.4-2',
         springBootVersion : '2.0.0.RELEASE',
         springboot : [
-                jpa  : '1.5.7.RELEASE',
-                web:'1.5.7.RELEASE',
+                jpa  : '+',
+                web:'+',
         ],
         plugin : [
                 lombok : "1.16.18"
@@ -14,10 +14,6 @@ def Dversion = [
         other : [
                 fastJson:"1.2.41",
                 gson:"2.8.2",
-                swagger:[
-                        "core":"2.7.0",
-                        "ui":"2.7.0"
-                ],
                 javatuples: '1.2'
         ]
 ]
