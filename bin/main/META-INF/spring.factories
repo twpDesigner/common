@@ -1,3 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.twp.common.component.process.configuration.FuncConfiguration,\
-  com.twp.common.utils.SpringContextUtil
+  com.twp.common.component.process.configuration.FuncConfiguration

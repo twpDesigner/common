@@ -2,6 +2,7 @@ package com.twp.common.component.process.configuration;
 
 import com.twp.common.component.process.exception.combo.impl.ExecptionForFunc;
 import com.twp.common.component.process.exception.combo.impl.ExecptionForTFunc;
+import com.twp.common.utils.SpringContextUtil;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -12,7 +13,8 @@ import org.springframework.context.annotation.Import;
 @ImportAutoConfiguration(
         {
                 ExecptionForFunc.class,
-                ExecptionForTFunc.class
+                ExecptionForTFunc.class,
+                SpringContextUtil.class
         }
 )
 @Configuration
