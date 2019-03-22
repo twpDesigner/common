@@ -5,8 +5,8 @@ def Dversion = [
         kotlin_version : '1.1.4-2',
         springBootVersion : '2.0.0.RELEASE',
         springboot : [
-                jpa  : '+',
-                web:'+',
+                jpa  : '1.5.7.RELEASE',
+                web:'1.5.7.RELEASE',
         ],
         plugin : [
                 lombok : "1.16.18"
