@@ -5,7 +5,7 @@ def Dversion = [
         kotlin_version : '1.1.4-2',
         springBootVersion : '2.0.0.RELEASE',
         springboot : [
-                jpa  : '2.1.3.RELEASE',
+                jpa  : '+',
                 web:'2.1.3.RELEASE',
         ],
         plugin : [
@@ -29,7 +29,7 @@ def PconfigMap = [
                     lombok : "org.projectlombok:lombok:${Dversion.plugin.lombok}"
                 ],
         publish:[
-                remoteUrl:"http://47.101.138.152:8081/repository/twp/",
+                remoteUrl:"http://192.168.22.166:8085/repository/commons/",
                 username:"admin",
                 password:"admin123"
         ]
