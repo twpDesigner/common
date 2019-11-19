@@ -20,3 +20,5 @@ target/
 src/test/
 logs/
 .gradle
+
+bin/
