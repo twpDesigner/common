@@ -41,6 +41,6 @@ repositories {
 }
 dependencies{
     compile(programDep)
-    //annotationProcessor "org.projectlombok:lombok:1.16.18"
+    annotationProcessor "org.projectlombok:lombok:1.16.18"
     //testCompile(testCompileDeps)
 }
