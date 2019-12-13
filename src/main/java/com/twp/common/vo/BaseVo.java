@@ -7,13 +7,14 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @MappedSuperclass
-public class BaseVo {
+public class BaseVo implements Serializable {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "idOrGenerate")
         @GenericGenerator(name = "idOrGenerate", strategy = "com.twp.common.basic.IdOrGenerate")
