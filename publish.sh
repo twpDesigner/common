@@ -1,3 +1,5 @@
-gradle clean build
-gradle generatePomFileForMavenJavaPublication
-gradle publish
+#gradle clean build
+#gradle generatePomFileForMavenJavaPublication
+#gradle publish
+
+gradle clean publishMavenJavaPublicationToMavenRepository

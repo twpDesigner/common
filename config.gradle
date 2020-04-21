@@ -29,9 +29,9 @@ def PconfigMap = [
                     lombok : "org.projectlombok:lombok:${Dversion.plugin.lombok}"
                 ],
         publish:[
-                remoteUrl:"http://192.168.22.166:8085/repository/commons/",
+                remoteUrl:"http://180.76.174.184:22769/repository/twp/",
                 username:"admin",
-                password:"admin123"
+                password:"123456"
         ]
 ]
 

@@ -49,6 +49,7 @@ public class MyPageImpl<T> {
 
     //private Sort sort;
     private boolean first;
+    private boolean empty;
 
     private int numberOfElements;
 
