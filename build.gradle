@@ -27,6 +27,12 @@ buildscript {
         //依赖寻源顺序
         mavenLocal()
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven("https://maven.pkg.github.com/madhead") {
+            credentials {
+                username = "twpDesigner"
+                password = "b1a2b84ade16f1f38dbeed5444685b0063d732fd"
+            }
+        }
         mavenCentral()//依赖Maven仓库
     }
     dependencies {
